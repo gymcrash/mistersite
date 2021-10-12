@@ -1,0 +1,48 @@
+.container {
+    
+    @keyframes autoExpand {
+        0% {transform: scale(100%, 0%) rotateX(45deg);}
+        50% {transform: scale(100%, 30%) rotateX(45deg);}
+        100% {transform: scale(100%, 100%) rotateX(4deg);}
+    }
+    
+    transform: scale(100%) rotateX(4deg);
+    transform-style: preserve-3d;
+    transition: transform 200ms ease-out;
+
+    animation-name: autoExpand;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    
+    animation-timing-function: ease-in;
+
+    background-color: black;
+    border:1px solid lightblue;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 1em;
+
+
+    &:hover {
+        transform: scale(101%);
+        border-color: cornflowerblue;
+    }
+
+}
+
+.perspective {
+    
+    perspective: 100px;
+}
+
+.flat {
+
+    @keyframes autoExpandFlat {
+        0% {transform: scale(0%, 0%) }
+        50% {transform: scale(100%, 30%) }
+        100% {transform: scale(100%, 100%)}
+    }
+
+    animation-name: autoExpandFlat;
+    transform: rotateX(0);
+}

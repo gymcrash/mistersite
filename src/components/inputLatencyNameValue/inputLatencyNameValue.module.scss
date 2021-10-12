@@ -1,0 +1,78 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25em;
+
+    &:hover {
+        .bar {
+            animation-name: none;
+        }
+    }
+}
+
+.stats {
+    display: flex;
+   flex-direction: column;
+}
+
+.avg {
+     color: lightgreen;
+}
+
+.barContainer {
+    border: 1px solid white;
+    height: 1em;
+    position: relative;
+    z-index: -1;
+}
+
+.bar {
+    @keyframes grow {
+        from {width: 0;}
+        to {width: 100%;}
+    }
+
+    animation-name: grow;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    
+    display: inline-block;
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.min, .avgbar, .max {
+
+    display: inline-block;
+    position: absolute;
+    
+    .inputBar{
+
+        border: 0 solid transparent;
+        background-color: black;
+        display: inline-block;
+        height: 1em;
+        width: 100%;
+    }
+}
+
+.avgbar {
+
+    .inputBar{
+
+        background-color: lightgreen;
+        height: 1.2em;
+    }
+
+}
+
+.max {
+    .inputBar{
+
+        background-color: darkred;
+        
+    }
+}

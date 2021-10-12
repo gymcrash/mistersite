@@ -1,0 +1,27 @@
+@import "/src/styles/mixins.scss";
+
+.list {
+    li {
+        list-style: decimal-leading-zero;
+        text-align: left;
+        padding-left: 1em;
+        transition: transform 200ms ease-out;
+    }
+    min-width: 30em;
+}
+
+.listItem::marker {
+    color: lightblue;
+}
+
+.listItem:hover {
+    border: 1px solid lightblue;
+    // background-color: lightblue;
+    // color: black;
+    font-weight: bold;
+    transform: scale(105%);
+}
+
+.expandButton {
+    @include button;
+}

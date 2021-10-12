@@ -1,0 +1,27 @@
+.container {
+    background-color: transparent;
+    position: relative;
+}
+
+.screen {
+    animation-name: scrollBg;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function:  linear;
+    animation-fill-mode: forwards;
+    background-image: linear-gradient(0deg, black, black, cornflowerblue, transparent, transparent);
+    background-position: 0 100%;
+    background-size: 400% 400%;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    position: absolute;
+
+
+    @keyframes scrollBg {
+        0% { background-position: 0 100%;}
+        50% {background-position: 0 50%;}
+        100% {background-position: 0 0%;}
+    }
+
+}
